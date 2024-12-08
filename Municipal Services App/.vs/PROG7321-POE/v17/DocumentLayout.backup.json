@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|c:\\users\\user\\source\\repos\\vcdn-2024\\prog7312-part-1-tanyagov\\prog7321-poe\\admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|solutionrelative:admin.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|c:\\users\\user\\source\\repos\\vcdn-2024\\prog7312-part-1-tanyagov\\prog7321-poe\\reportissues.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|solutionrelative:reportissues.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|c:\\users\\user\\source\\repos\\vcdn-2024\\prog7312-part-1-tanyagov\\prog7321-poe\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|c:\\users\\user\\source\\repos\\vcdn-2024\\prog7312-part-1-tanyagov\\prog7321-poe\\rating.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|solutionrelative:rating.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|c:\\users\\user\\source\\repos\\vcdn-2024\\prog7312-part-1-tanyagov\\prog7321-poe\\rating.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{39C26811-8F97-4EF0-9F11-A606F26FE65C}|PROG7321-POE.csproj|solutionrelative:rating.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e506b91c-c606-466a-90a9-123d1d1e12b3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportIssues.xaml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\ReportIssues.xaml",
+              "RelativeDocumentMoniker": "ReportIssues.xaml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\ReportIssues.xaml",
+              "RelativeToolTip": "ReportIssues.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-12T12:14:55.791Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Admin.xaml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\Admin.xaml",
+              "RelativeDocumentMoniker": "Admin.xaml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\Admin.xaml",
+              "RelativeToolTip": "Admin.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-12T12:14:14.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-12T12:08:48.315Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Rating.xaml",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\Rating.xaml",
+              "RelativeDocumentMoniker": "Rating.xaml",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\Rating.xaml",
+              "RelativeToolTip": "Rating.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-12T12:08:48.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Rating.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\Rating.xaml.cs",
+              "RelativeDocumentMoniker": "Rating.xaml.cs",
+              "ToolTip": "C:\\Users\\USER\\source\\repos\\VCDN-2024\\prog7312-part-1-TanyaGov\\PROG7321-POE\\Rating.xaml.cs",
+              "RelativeToolTip": "Rating.xaml.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABUAAABQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T12:08:49.008Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 985,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

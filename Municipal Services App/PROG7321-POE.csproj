@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <RootNamespace>PROG7321_POE</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="360_F_317497799_u9BNadcgmEzbWAio1Wgn7RDAyqeTrcWc.jpg" />
+    <None Remove="Images\BlueStar.png" />
+    <None Remove="Images\WhiteStar.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="360_F_317497799_u9BNadcgmEzbWAio1Wgn7RDAyqeTrcWc.jpg" />
+    <Resource Include="Images\BlueStar.png" />
+    <Resource Include="Images\WhiteStar.png" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "PROG7321-POE/1.0.0": {
+        "runtime": {
+          "PROG7321-POE.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PROG7321-POE/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

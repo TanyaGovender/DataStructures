@@ -1,0 +1,150 @@
+﻿<Window x:Class="PROG7321_POE.ServiceRequests"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG7321_POE"
+        mc:Ignorable="d"
+        Title="Service Requests"
+        WindowState="Maximized"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F5F5">
+
+    <Window.Resources>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#005f8c"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <!-- Menu bar width -->
+            <ColumnDefinition Width="*"/>
+            <!-- Main content area -->
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0" Background="#495434" VerticalAlignment="Stretch" Margin="5">
+            <TextBlock Text="Services" FontSize="20" FontWeight="Bold" Foreground="White" 
+                       Margin="10,20,0,20" HorizontalAlignment="Center"/>
+
+            <Button Content="Main Menu" FontSize="16" FontWeight="Bold" Foreground="White" Background="#c4b36e" 
+                    Margin="10,20,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+                    Click="Menu_Click" />
+            
+            <Button Content="Local Events" FontSize="16" FontWeight="Bold" Foreground="White" Background="#c6c97b" 
+                    Margin="10,25,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+                    Click="Events_Click"/>
+            <Button Content="Report Issue" FontSize="16" FontWeight="Bold" Foreground="White" Background="#e1ad01" 
+                    Margin="10,25,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+                    Click="Issues_Click"/>
+            <Button Content="Admin" FontSize="16" FontWeight="Bold" Foreground="White" Background="#97ae6c" 
+                    Margin="10,25,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+                    Click="Admin_Click"/>
+            <Button Content="BACK" FontSize="16" FontWeight="Bold" Foreground="White" Background="LightGray" 
+                    VerticalAlignment="Bottom"
+        Margin="10,300,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+        Click="btnBack_Click"/>
+
+            <Button Content="EXIT" FontSize="16" FontWeight="Bold" Foreground="White" Background="LightGray" 
+Margin="10,25,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+Click="Exit_Click"/>
+
+        </StackPanel>
+
+        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+            <StackPanel Margin="5">
+                <!-- Background Image -->
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="/360_F_317497799_u9BNadcgmEzbWAio1Wgn7RDAyqeTrcWc.jpg"/>
+                </StackPanel.Background>
+
+                <!-- Title -->
+                <TextBlock Text="Service Requests" 
+                           FontSize="34" 
+                           FontWeight="Bold" 
+                           Margin="0,20,0,20" 
+                           HorizontalAlignment="Center" 
+                           Foreground="#495434" />
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20">
+                    
+                    <ComboBox x:Name="cmbCategory" Width="250" Height="35" 
+                    Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" 
+                    Padding="5" Background="#FFFFFF" BorderBrush="#D0D0D0" BorderThickness="1" />
+
+                    <TextBlock Text="ID: " Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" 
+                    Padding="5"></TextBlock>
+
+                    <TextBox  x:Name="txtID" Width="60" Height="35" Margin="0,0,10,0" HorizontalAlignment="Left" Background="#FFFFFF" VerticalAlignment="Top" FontSize="12">
+                    </TextBox>
+
+                    <TextBlock Text="Request: " Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="14" 
+Padding="5"></TextBlock>
+
+                    <TextBox  x:Name="txtRequest" Width="250" Height="35" Margin="0,0,10,0" HorizontalAlignment="Left" Background="#FFFFFF" VerticalAlignment="Top" FontSize="12">
+                    </TextBox>
+
+                    <Button Content="Search" Width="200" Height="35" 
+                    Margin="20,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="14" Padding="5" 
+                    Background="#97ae6c" Foreground="#FFFFFF" BorderBrush="#D0D0D0" BorderThickness="1" Cursor="Hand" 
+                    Click="SearchEvents" />
+
+                    <Button Content="Show All Requests" Width="200" Height="35" 
+                    Margin="30,0,0,0" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="14" 
+                    Padding="5" Background="#97ae6c" Foreground="#FFFFFF" BorderBrush="#D0D0D0" 
+                       BorderThickness="1" Cursor="Hand" Click="ResetEvents"/>
+
+                   
+                    
+                </StackPanel>
+                
+                <!-- List of Service Requests -->
+                <ItemsControl x:Name="RequestListView" ItemsSource="{Binding Requests}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border BorderBrush="#97ae6c" BorderThickness="1" Margin="5" Padding="15" CornerRadius="5" Background="White">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding title}" FontWeight="Bold" FontSize="16" Foreground="#495434" Margin="0,0,0,5" />
+                                    <TextBlock FontSize="14" Foreground="Gray">
+                                        <Run Text="ID: " />
+                                        <Run Text="{Binding ID}" />
+                                    </TextBlock>
+                                    <TextBlock FontSize="14" Foreground="Gray">
+                                        <Run Text="Status: " />
+                                        <Run Text="{Binding status}" />
+                                    </TextBlock>
+                                    <TextBlock FontSize="14" Foreground="#97ae6c">
+                                        <Run Text="Priority: " />
+                                        <Run Text="{Binding priority}" />
+                                    </TextBlock>
+                                    <ProgressBar Minimum="0" Maximum="100" Value="{Binding progress}" Height="10" Margin="0,10,0,10" Foreground="#97ae6c" />
+                                    <Button Content="View Details" 
+                                            HorizontalAlignment="Right" 
+                                            Padding="5,2" 
+                                            Background="#97ae6c" 
+                                            Foreground="White" 
+                                            Click="ViewDetailsButton_Click" />
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+
+                <!-- Back Button -->
+               
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

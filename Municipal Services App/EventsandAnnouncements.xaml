@@ -1,0 +1,269 @@
+﻿<Window x:Class="PROG7321_POE.EventsandAnnouncements"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROG7321_POE"
+        mc:Ignorable="d"
+         WindowState="Maximized"
+ WindowStartupLocation="CenterScreen"
+       Title="Events and Announcements" Height="450" Width="800"
+        Background="#F5F5F5">
+
+    <Window.Resources>
+        <Style x:Key="MenuButtonStyle" TargetType="Button">
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="Background" Value="#005f8c"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Height" Value="50"/>
+            <Setter Property="Margin" Value="10,10,10,0"/>
+            <Setter Property="HorizontalAlignment" Value="Stretch"/>
+            <Setter Property="VerticalAlignment" Value="Center"/>
+            <Setter Property="BorderBrush" Value="White"/>
+            <Setter Property="BorderThickness" Value="1"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="10">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+           
+            <ColumnDefinition Width="*"/>
+           
+        </Grid.ColumnDefinitions>
+
+
+        <StackPanel Grid.Column="0" Background="#495434" VerticalAlignment="Stretch" Margin="5">
+            <TextBlock Text="Services" FontSize="20" FontWeight="Bold" Foreground="White" 
+               Margin="10,20,0,20" HorizontalAlignment="Center"/>
+
+            <Button Content="Main Menu" FontSize="16" FontWeight="Bold" Foreground="White" Background="#c4b36e" 
+            Margin="10,20,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+            Click="Menu_Click" />
+
+            <Button Content="Service Requests" FontSize="16" FontWeight="Bold" Foreground="White" Background="#c6c97b" 
+            Margin="10,25,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+            Click="Request_Click"/>
+            <Button Content="Report Issue" FontSize="16" FontWeight="Bold" Foreground="White" Background="#e1ad01" 
+            Margin="10,25,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+            Click="Issues_Click"/>
+            <Button Content="Admin" FontSize="16" FontWeight="Bold" Foreground="White" Background="#97ae6c" 
+            Margin="10,25,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+            Click="Admin_Click"/>
+            <Button Content="BACK" FontSize="16" FontWeight="Bold" Foreground="White" Background="LightGray" 
+            VerticalAlignment="Bottom"
+Margin="10,300,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+Click="btnBack_Click"/>
+
+            <Button Content="EXIT" FontSize="16" FontWeight="Bold" Foreground="White" Background="LightGray" 
+Margin="10,25,10,0" Height="50" Style="{StaticResource MenuButtonStyle}" 
+Click="Exit_Click"/>
+
+
+        </StackPanel>
+
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto" Grid.Column="1">
+            
+            <StackPanel>
+
+                <StackPanel.Background>
+                    <ImageBrush ImageSource="/360_F_317497799_u9BNadcgmEzbWAio1Wgn7RDAyqeTrcWc.jpg"/>
+                </StackPanel.Background>
+
+                <TextBlock Text="Events and Announcements" FontSize="34" FontWeight="Bold" 
+            Margin="0,20,0,20" HorizontalAlignment="Center" Foreground="#97ae6c"/>
+                
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="20">
+                    
+                    <ComboBox x:Name="cmbCategory" Width="200" Height="35" 
+              Margin="0,0,3,0" 
+              HorizontalAlignment="Left" 
+              VerticalAlignment="Top" 
+              FontSize="14" 
+              Padding="5"
+              Background="#FFFFFF" 
+              BorderBrush="#D0D0D0" 
+              BorderThickness="1" />
+
+                    <Label Content="Start Date:"  FontSize="14" 
+ Padding="5"  Margin="5,0,3,0" />
+
+
+                    <DatePicker x:Name="startPicker" Width="150" Height="35" 
+                Margin="3,0,3,0" 
+                HorizontalAlignment="Left" 
+                VerticalAlignment="Top" 
+                FontSize="14" 
+                Padding="5" 
+                Background="#FFFFFF" 
+                BorderBrush="#D0D0D0" 
+                BorderThickness="1" />
+
+                    <Label Content="End Date:"  FontSize="14" 
+Padding="5" />
+                    
+                    <DatePicker x:Name="endPicker" Width="150" Height="35" 
+Margin="3,0,3,0" 
+HorizontalAlignment="Left" 
+VerticalAlignment="Top" 
+FontSize="14" 
+Padding="5" 
+Background="#FFFFFF" 
+BorderBrush="#D0D0D0" 
+BorderThickness="1" />
+
+                    <Button Content="Search" Width="100" Height="35" 
+            Margin="5,0,0,0" 
+            HorizontalAlignment="Right" 
+            VerticalAlignment="Top" 
+            FontSize="14" 
+            Padding="5" 
+            Background="#97ae6c" 
+            Foreground="#FFFFFF" 
+            BorderBrush="#D0D0D0" 
+            BorderThickness="1" 
+            Cursor="Hand" 
+            Click="SearchEvents" />
+
+                    <Button Content="Show All Events" Width="150" Height="35" 
+Margin="10,0,0,0" 
+HorizontalAlignment="Right" 
+VerticalAlignment="Top" 
+FontSize="14" 
+Padding="5" 
+Background="#97ae6c" 
+Foreground="#FFFFFF" 
+BorderBrush="#D0D0D0" 
+BorderThickness="1" 
+Cursor="Hand" 
+Click="ResetEvents"
+/>
+                </StackPanel>
+
+                <!-- Recommendations -->
+                <StackPanel>
+                    <TextBlock Text="Recommendations" 
+               FontWeight="Bold" 
+               FontSize="20" 
+               Foreground="DarkGreen" 
+                
+               HorizontalAlignment="Left"
+               Margin="10" />
+
+                    <ItemsControl x:Name="RecommendationList" ItemsSource="{Binding Events}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <GroupBox Margin="0,10,0,0" Background="#FFFFFF" BorderBrush="#D0D0D0" BorderThickness="1">
+                                    <StackPanel Margin="10">
+                                        <TextBlock Text="{Binding Title}" 
+                                   FontWeight="Bold" 
+                                   FontSize="16" 
+                                   Foreground="#97ae6c"/>
+                                        <TextBlock Text="{Binding Category}" 
+                                   FontSize="14" 
+                                   Foreground="#555"/>
+                                        <TextBlock FontSize="14" Foreground="#555">
+                                            <TextBlock.Text>
+                                                <MultiBinding StringFormat="Date: {0:dd MMM yyyy}">
+                                                    <Binding Path="Date" />
+                                                </MultiBinding>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                        <TextBlock FontSize="14" Foreground="#555">
+                                            <TextBlock.Text>
+                                                <MultiBinding StringFormat="Time: {0}">
+                                                    <Binding Path="Time" />
+                                                </MultiBinding>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                        <TextBlock FontSize="14" Foreground="#555">
+                                            <TextBlock.Text>
+                                                <MultiBinding StringFormat="Venue: {0}">
+                                                    <Binding Path="Venue" />
+                                                </MultiBinding>
+                                            </TextBlock.Text>
+                                        </TextBlock>
+                                        <TextBlock Text="{Binding Description}" 
+                                   FontSize="12" 
+                                   Foreground="#666" 
+                                   Margin="0,5,0,0"/>
+                                        <TextBlock Text="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" 
+                                   FontSize="12" 
+                                   Foreground="#999" />
+                                    </StackPanel>
+                                </GroupBox>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+
+              
+                    <TextBlock Text="Upcoming Events" 
+FontWeight="Bold" 
+FontSize="20" 
+Foreground="DarkGreen" 
+HorizontalAlignment="Left"
+Margin="10" />
+                    <!--Events-->
+                <ItemsControl x:Name="EventsList">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <GroupBox Margin="0,10,0,0" Background="#FFFFFF" BorderBrush="#D0D0D0" BorderThickness="1">
+                                <StackPanel>
+
+                                    <TextBlock Text="{Binding Key}" 
+                           FontWeight="Bold" 
+                           FontSize="20" 
+                           Foreground="DarkGreen" 
+                           HorizontalAlignment="Left"
+                           Margin="10" />
+                                    <ItemsControl ItemsSource="{Binding Value}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <StackPanel Margin="10">
+                                                    <TextBlock Text="{Binding Title}" FontWeight="Bold" 
+                                           FontSize="16" Foreground="#97ae6c"/>
+                                                    <TextBlock Text="{Binding Category}" FontSize="14" 
+                                           Foreground="#555"/>
+                                                    <TextBlock FontSize="14" Foreground="#555">
+                                                        <TextBlock.Text>
+                                                            <MultiBinding StringFormat="Time: {0}">
+                                                                <Binding Path="Time" />
+                                                            </MultiBinding>
+                                                        </TextBlock.Text>
+                                                    </TextBlock>
+                                                    <TextBlock FontSize="14" Foreground="#555">
+                                                        <TextBlock.Text>
+                                                            <MultiBinding StringFormat="Venue: {0}">
+                                                                <Binding Path="Venue" />
+                                                            </MultiBinding>
+                                                        </TextBlock.Text>
+                                                    </TextBlock>
+                                                    <TextBlock Text="{Binding Description}" FontSize="12" 
+                                           Foreground="#666" Margin="0,5,0,0"/>
+                                                    <TextBlock 
+                                                        Text="------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------" 
+                                                               FontSize="12" 
+                                           Foreground="#999" />
+                                                </StackPanel>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </StackPanel>
+                            </GroupBox>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+
+                </ItemsControl>
+
+            </StackPanel>
+            
+        </ScrollViewer>
+
+       
+    </Grid>
+</Window>
